@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h1>{{ titulo }}</h1>
+      <h1>{{ titulo | upper | lower }}</h1>
     </div>
 </template>
 
@@ -12,7 +12,9 @@ export default {
     }
   }, 
   filters: {
-    
+    upper(value) {
+      return value.toUpperCase();
+    }
   }
 }
 </script>
